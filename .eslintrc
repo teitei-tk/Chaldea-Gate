@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype",
+    "async-await"
+  ]
+}
