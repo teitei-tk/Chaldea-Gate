@@ -6,7 +6,7 @@
   "author": "teitei-tk <teitei.tk@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "chaldeas": "^0.0.20"
+    "chaldeas": "^0.0.24"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
