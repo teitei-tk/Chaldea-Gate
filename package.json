@@ -6,7 +6,8 @@
   "author": "teitei-tk <teitei.tk@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "chaldeas": "^0.1.1"
+    "chaldeas": "^0.1.2",
+    "chrome-remote-interface-flowtype": "^0.1.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
