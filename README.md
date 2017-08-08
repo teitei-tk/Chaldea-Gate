@@ -8,27 +8,45 @@ Page Object Model using Chrome Headless Browser
 ```JavaScript
 // @flow
 
-import Chaldeas from 'chaldeas'
-import TriHermes from 'triHermes';
+import type { Node } from 'chrome-remote-interface-flowtype/src/types/dom';
 
-class MyGithubRepositories extends TriHermes {
-  url = "https://github.com/teitei-tk?tab=repositories"
+import Chaldeas from 'chaldeas';
+import TriHermes from '../lib';
+import Document from '../lib/document';
 
-  titles() {
-    // do something
+class GithubPage extends TriHermes {
+  url = 'https://github.com/teitei-tk';
+
+  getPinnedRepos(): Array<Node> {
+    return this.doc.getNodesByClassName('repo');
+  }
+
+  getPinnedReposName(): Array<string> {
+    const reposName = [];
+    this.getPinnedRepos().forEach((node) => {
+      const title = Document.getAttribute(node, 'title');
+      if (!title || title === null) {
+        return;
+      }
+
+      reposName.push(title);
+    });
+
+    return reposName;
   }
 }
 
-// chrome accessor class
-const chaldeas = Chaldeas.new();
-const repoPage = new MyGithubPage(chaldeas);
+async function main() {
+  const chaldeas = Chaldeas.new();
+  const page = new GithubPage(chaldeas);
 
-// fetch class url at https://github.com/teitei-tk?tab=repositories
-repoPage.load()
+  await page.load();
 
-// get repository names
-console.log(repoPage.titles()); // [TriHermes, Chaldeas...]
+  const reposName = page.getPinnedReposName();
+  console.log(reposName);
 
-// terminate chrome headless.
-chaldeas.terminate();
+  await chaldeas.terminate();
+}
+
+main(); // [ 'Chaldeas', 'chrome-remote-interface-flowtype', 'Marguerite', 'Simple-AES-Cipher', 'gattaca', 'malwiya' ]
 ```
