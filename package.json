@@ -1,10 +1,14 @@
 {
   "name": "TriHermes",
-  "version": "0.0.1",
-  "main": "lib/index.js",
+  "version": "0.0.2",
+  "main": "src/index.js",
   "repository": "ssh://git@github.com/teitei-tk/TriHermes.git",
   "author": "teitei-tk <teitei.tk@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "flow:gen": "flow-copy-source lib src",
+    "build": "babel lib -d src; yarn run flow:gen"
+  },
   "dependencies": {
     "chaldeas": "^0.1.2",
     "chrome-remote-interface-flowtype": "^0.1.3"
@@ -28,6 +32,7 @@
     "eslint-plugin-async-await": "^0.0.0",
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "^2.5.0",
-    "flow-bin": "^0.48.0"
+    "flow-bin": "^0.48.0",
+    "flow-copy-source": "^1.2.0"
   }
 }
