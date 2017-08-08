@@ -7,7 +7,11 @@
   "license": "MIT",
   "scripts": {
     "flow:gen": "flow-copy-source lib src",
+    "test": "jest",
     "build": "babel lib -d src; yarn run flow:gen"
+  },
+  "jest": {
+    "roots": ["lib/"]
   },
   "dependencies": {
     "chaldeas": "^0.1.2",
@@ -17,6 +21,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
