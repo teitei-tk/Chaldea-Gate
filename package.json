@@ -11,10 +11,13 @@
     "build": "babel lib -d src; yarn run flow:gen"
   },
   "jest": {
-    "roots": ["lib/"]
+    "roots": [
+      "lib/"
+    ]
   },
   "dependencies": {
     "chaldeas": "^0.1.2",
+    "cheerio": "^1.0.0-rc.2",
     "chrome-remote-interface-flowtype": "^0.1.3"
   },
   "devDependencies": {
