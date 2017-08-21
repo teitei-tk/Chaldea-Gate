@@ -8,6 +8,10 @@
   ],
   "plugins": [
     "flowtype",
-    "async-await"
-  ]
+    "async-await",
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  }
 }
