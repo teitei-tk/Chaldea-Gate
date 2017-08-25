@@ -1,0 +1,17 @@
+{
+  "coverage": "100%",
+  "expectCount": 14,
+  "actualCount": 14,
+  "files": {
+    "lib/document.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "lib/triHelmes.js": {
+      "expectCount": 9,
+      "actualCount": 9,
+      "undocumentLines": []
+    }
+  }
+}

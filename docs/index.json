@@ -1,0 +1,974 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "lib/document.js",
+    "content": "// @flow\n\nimport type { DOM } from 'chrome-remote-interface-flowtype';\n\n/**\n * @type {Document}\n */\nexport default class Document {\n  dom: DOM;\n\n  /**\n   * @param  {DOM} dom [chrome-remote-interface dom domain]\n   */\n  constructor(dom: DOM) {\n    this.dom = dom;\n  }\n\n  async querySelector(query: string): Promise<?string> {\n    const results = await this.querySelectorAll(query);\n    if (results.length <= 0) {\n      return null;\n    }\n\n    return results[0];\n  }\n\n  async querySelectorAll(query: string): Promise<Array<string>> {\n    const searchResult = await this.dom.performSearch({ query });\n\n    const nodeIds = (await this.dom.getSearchResults({\n      searchId: searchResult.searchId,\n      fromIndex: 0,\n      toIndex: searchResult.resultCount,\n    })).nodeIds;\n\n    const htmls = nodeIds.map(async (nodeId) => {\n      const html = await this.dom.getOuterHTML({ nodeId });\n      return html.outerHTML;\n    });\n\n    return Promise.all(htmls);\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/lib/document.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Document",
+    "memberof": "lib/document.js",
+    "static": true,
+    "longname": "lib/document.js~Document",
+    "access": "public",
+    "export": true,
+    "importPath": "TriHermes/lib/document.js",
+    "importStyle": "Document",
+    "description": "",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Document"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "member",
+    "name": "dom",
+    "memberof": "lib/document.js~Document",
+    "static": false,
+    "longname": "lib/document.js~Document#dom",
+    "access": "public",
+    "description": "",
+    "lineNumber": 9,
+    "type": {
+      "nullable": null,
+      "types": [
+        "DOM"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "lib/document.js~Document",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/document.js~Document#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 14,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "DOM"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dom",
+        "description": "[chrome-remote-interface dom domain]"
+      }
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "querySelector",
+    "memberof": "lib/document.js~Document",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "lib/document.js~Document#querySelector",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 18,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "querySelectorAll",
+    "memberof": "lib/document.js~Document",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "lib/document.js~Document#querySelectorAll",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "lib/index.js",
+    "content": "// @flow\n\nimport TriHermes from './triHelmes';\n\nexport default TriHermes;\n",
+    "static": true,
+    "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/lib/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "lib/triHelmes.js",
+    "content": "// @flow\n\nimport Cheerio from 'cheerio';\n\nimport Chaldeas from 'chaldeas';\nimport Document from './document';\n\n/**\n * @type {TriHermes}\n */\nexport default class TriHermes {\n  chaldeas: Chaldeas;\n  url: string;\n  doc: Document;\n\n  /**\n   * @param  {Chaldeas} chaldeas [chaldeas instance]\n   */\n  constructor(chaldeas: Chaldeas) {\n    this.chaldeas = chaldeas;\n  }\n\n  static parse(html: string): Cheerio {\n    return Cheerio.load(html);\n  }\n\n  async load(): Promise<> {\n    const devTools = await this.chaldeas.getDevtoolsInterface();\n    const page = await devTools.PageDomain();\n\n    await page.navigate({ url: this.url });\n\n    return new Promise((resolve) => {\n      page.domContentEventFired(async () => {\n        const dom = await devTools.DOMDomain();\n\n        this.doc = new Document(dom);\n\n        resolve();\n      });\n    }).catch(e => this.chaldeas.terminate().then(() => {\n      throw e;\n    }));\n  }\n\n  async querySelectorAll(query: string): Promise<Array<any>> {\n    const results = await this.doc.querySelectorAll(query);\n    return results.map(html => TriHermes.parse(html));\n  }\n\n  async querySelector(query: string): Promise<any> {\n    const result = await this.doc.querySelector(query);\n    if (result === null) {\n      return null;\n    }\n\n    return TriHermes.parse((result || ''));\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/lib/triHelmes.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "class",
+    "name": "TriHermes",
+    "memberof": "lib/triHelmes.js",
+    "static": true,
+    "longname": "lib/triHelmes.js~TriHermes",
+    "access": "public",
+    "export": true,
+    "importPath": "TriHermes/lib/triHelmes.js",
+    "importStyle": "TriHermes",
+    "description": "",
+    "lineNumber": 11,
+    "type": {
+      "nullable": null,
+      "types": [
+        "TriHermes"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "interface": false
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "chaldeas",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#chaldeas",
+    "access": "public",
+    "description": "",
+    "lineNumber": 12,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Chaldeas"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "url",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#url",
+    "access": "public",
+    "description": "",
+    "lineNumber": 13,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "doc",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#doc",
+    "access": "public",
+    "description": "",
+    "lineNumber": 14,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Document"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Chaldeas"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "chaldeas",
+        "description": "[chaldeas instance]"
+      }
+    ]
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "parse",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/triHelmes.js~TriHermes.parse",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 23,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "html",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Cheerio"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "load",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#load",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 27,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "querySelectorAll",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#querySelectorAll",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 46,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "querySelector",
+    "memberof": "lib/triHelmes.js~TriHermes",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "lib/triHelmes.js~TriHermes#querySelector",
+    "access": "public",
+    "description": " ",
+    "lineNumber": 51,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "query",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# TriHermes\n\n[![CircleCI](https://circleci.com/gh/teitei-tk/TriHermes.svg?style=svg)](https://circleci.com/gh/teitei-tk/TriHermes)\n\nPage Object Model using Chrome Headless Browser\n\n## Dependencies\n\n* Node.js 6.10 or later\n* chaldeas ^0.1.2\n* cheerio ^1.0.0-rc.2\n* chrome-remote-interface-flowtype ^0.1.3\n\n## Example\n\n```JavaScript\n// @flow\n\nimport Chaldeas from 'chaldeas';\nimport TriHermes from 'triHermes'\n\nclass GithubPage extends TriHermes {\n  url = 'https://github.com/teitei-tk'\n\n  async getAccountTitle(): Promise<string> {\n    const title = await this.querySelector('title');\n    return title.text();\n  }\n\n  async getPinnedRepoNames(): Promise<Array<string>> {\n    const results = await this.querySelectorAll('.repo');\n    return results.map(r => r.text());\n  }\n}\n\nasync function main() {\n  const chaldeas = Chaldeas.new();\n  const page = new GithubPage(chaldeas);\n\n  await page.load();\n\n  const reposName = page.getPinnedReposName();\n  console.log(reposName); // [ 'Chaldeas', 'chrome-remote-interface-flowtype', 'Marguerite', 'Simple-AES-Cipher', 'gattaca', 'malwiya' ]\n\n  await chaldeas.terminate();\n}\n\nmain();\n```\n",
+    "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"TriHermes\",\n  \"version\": \"0.1.0\",\n  \"main\": \"src/index.js\",\n  \"repository\": \"ssh://git@github.com/teitei-tk/TriHermes.git\",\n  \"homepage\": \"https://github.com/teitei-tk/TriHermes\",\n  \"author\": \"teitei-tk <teitei.tk@gmail.com>\",\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"chrome\",\n    \"headless\",\n    \"headless-browser\",\n    \"chrome-headless\",\n    \"devtools\",\n    \"page object\"\n  ],\n  \"bugs\": {\n    \"url\": \"https://github.com/teitei-tk/TriHermes/issues\",\n    \"email\": \"teitei.tk@gmail.com\"\n  },\n  \"scripts\": {\n    \"eslint:lint\": \"eslint lib/\",\n    \"flow:lint\": \"flow lib/\",\n    \"flow:gen\": \"flow-copy-source lib src\",\n    \"doc:gen\": \"esdoc -c .esdoc.json\",\n    \"lint\": \"yarn run eslint:lint; yarn run flow:lint;\",\n    \"test\": \"yarn run lint; jest\",\n    \"build\": \"babel lib -d src; yarn run flow:gen\",\n    \"pre:build\": \"yarn run test; yarn run build; yarn run doc:gen;\"\n  },\n  \"jest\": {\n    \"roots\": [\n      \"lib/\"\n    ]\n  },\n  \"dependencies\": {\n    \"chaldeas\": \"^0.1.2\",\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"chrome-remote-interface-flowtype\": \"^0.1.3\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.24.1\",\n    \"babel-core\": \"^6.25.0\",\n    \"babel-eslint\": \"^7.2.3\",\n    \"babel-jest\": \"^20.0.3\",\n    \"babel-plugin-transform-async-to-generator\": \"^6.24.1\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-flow-strip-types\": \"^6.22.0\",\n    \"babel-plugin-transform-runtime\": \"^6.23.0\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-es2017\": \"^6.24.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"esdoc\": \"^1.0.1\",\n    \"esdoc-flow-type-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"3.19.0\",\n    \"eslint-config-airbnb-base\": \"^11.2.0\",\n    \"eslint-plugin-async-await\": \"^0.0.0\",\n    \"eslint-plugin-flowtype\": \"^2.34.0\",\n    \"eslint-plugin-import\": \"^2.5.0\",\n    \"eslint-plugin-jest\": \"^20.0.3\",\n    \"flow-bin\": \"^0.48.0\",\n    \"flow-copy-source\": \"^1.2.0\",\n    \"jest\": \"^20.0.4\"\n  }\n}\n",
+    "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

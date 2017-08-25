@@ -1,6 +1,5 @@
 [ignore]
-babel-runtime/**/*
-chaldeas/**/*
+.*/node_modules/chrome-devtools-frontend/.*
 
 [include]
 
