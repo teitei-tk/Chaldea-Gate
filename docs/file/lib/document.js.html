@@ -39,18 +39,22 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// @flow
 
 import type { DOM } from &apos;chrome-remote-interface-flowtype&apos;;
+import type { Node } from &apos;chrome-remote-interface-flowtype/src/types/dom&apos;;
 
 /**
  * @type {Document}
  */
 export default class Document {
   dom: DOM;
+  rootNode: Node;
 
   /**
    * @param  {DOM} dom [chrome-remote-interface dom domain]
+   * @param  {Node} rootNode [page root node]
    */
-  constructor(dom: DOM) {
+  constructor(dom: DOM, rootNode: Node) {
     this.dom = dom;
+    this.rootNode = rootNode;
   }
 
   async querySelector(query: string): Promise&lt;?string&gt; {

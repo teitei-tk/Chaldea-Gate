@@ -1,6 +1,6 @@
 {
   "name": "TriHermes",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "src/index.js",
   "repository": "ssh://git@github.com/teitei-tk/TriHermes.git",
   "homepage": "https://github.com/teitei-tk/TriHermes",
@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/teitei-tk/TriHermes/issues",
     "email": "teitei.tk@gmail.com"
+  },
+  "engines": {
+    "node": "6.9.1"
   },
   "scripts": {
     "eslint:lint": "eslint lib/",

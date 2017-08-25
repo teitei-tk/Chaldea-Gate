@@ -324,6 +324,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "lib/document.js~document#rootnode",
+    "class/lib/document.js~Document.html#instance-member-rootNode",
+    "lib/document.js~Document#rootNode",
+    "member"
+  ],
+  [
     "lib/index.js",
     "file/lib/index.js.html",
     "lib/index.js",

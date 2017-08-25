@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "lib/document.js",
-    "content": "// @flow\n\nimport type { DOM } from 'chrome-remote-interface-flowtype';\n\n/**\n * @type {Document}\n */\nexport default class Document {\n  dom: DOM;\n\n  /**\n   * @param  {DOM} dom [chrome-remote-interface dom domain]\n   */\n  constructor(dom: DOM) {\n    this.dom = dom;\n  }\n\n  async querySelector(query: string): Promise<?string> {\n    const results = await this.querySelectorAll(query);\n    if (results.length <= 0) {\n      return null;\n    }\n\n    return results[0];\n  }\n\n  async querySelectorAll(query: string): Promise<Array<string>> {\n    const searchResult = await this.dom.performSearch({ query });\n\n    const nodeIds = (await this.dom.getSearchResults({\n      searchId: searchResult.searchId,\n      fromIndex: 0,\n      toIndex: searchResult.resultCount,\n    })).nodeIds;\n\n    const htmls = nodeIds.map(async (nodeId) => {\n      const html = await this.dom.getOuterHTML({ nodeId });\n      return html.outerHTML;\n    });\n\n    return Promise.all(htmls);\n  }\n}\n",
+    "content": "// @flow\n\nimport type { DOM } from 'chrome-remote-interface-flowtype';\nimport type { Node } from 'chrome-remote-interface-flowtype/src/types/dom';\n\n/**\n * @type {Document}\n */\nexport default class Document {\n  dom: DOM;\n  rootNode: Node;\n\n  /**\n   * @param  {DOM} dom [chrome-remote-interface dom domain]\n   * @param  {Node} rootNode [page root node]\n   */\n  constructor(dom: DOM, rootNode: Node) {\n    this.dom = dom;\n    this.rootNode = rootNode;\n  }\n\n  async querySelector(query: string): Promise<?string> {\n    const results = await this.querySelectorAll(query);\n    if (results.length <= 0) {\n      return null;\n    }\n\n    return results[0];\n  }\n\n  async querySelectorAll(query: string): Promise<Array<string>> {\n    const searchResult = await this.dom.performSearch({ query });\n\n    const nodeIds = (await this.dom.getSearchResults({\n      searchId: searchResult.searchId,\n      fromIndex: 0,\n      toIndex: searchResult.resultCount,\n    })).nodeIds;\n\n    const htmls = nodeIds.map(async (nodeId) => {\n      const html = await this.dom.getOuterHTML({ nodeId });\n      return html.outerHTML;\n    });\n\n    return Promise.all(htmls);\n  }\n}\n",
     "static": true,
     "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/lib/document.js",
     "access": "public",
@@ -586,7 +586,7 @@
     "importPath": "TriHermes/lib/document.js",
     "importStyle": "Document",
     "description": "",
-    "lineNumber": 8,
+    "lineNumber": 9,
     "type": {
       "nullable": null,
       "types": [
@@ -606,7 +606,7 @@
     "longname": "lib/document.js~Document#dom",
     "access": "public",
     "description": "",
-    "lineNumber": 9,
+    "lineNumber": 10,
     "type": {
       "nullable": null,
       "types": [
@@ -618,6 +618,25 @@
   },
   {
     "__docId__": 51,
+    "kind": "member",
+    "name": "rootNode",
+    "memberof": "lib/document.js~Document",
+    "static": false,
+    "longname": "lib/document.js~Document#rootNode",
+    "access": "public",
+    "description": "",
+    "lineNumber": 11,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Node"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 52,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "lib/document.js~Document",
@@ -627,7 +646,7 @@
     "longname": "lib/document.js~Document#constructor",
     "access": "public",
     "description": "",
-    "lineNumber": 14,
+    "lineNumber": 17,
     "params": [
       {
         "nullable": null,
@@ -638,11 +657,21 @@
         "optional": false,
         "name": "dom",
         "description": "[chrome-remote-interface dom domain]"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Node"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "rootNode",
+        "description": "[page root node]"
       }
     ]
   },
   {
-    "__docId__": 53,
+    "__docId__": 55,
     "kind": "method",
     "name": "querySelector",
     "memberof": "lib/document.js~Document",
@@ -652,7 +681,7 @@
     "longname": "lib/document.js~Document#querySelector",
     "access": "public",
     "description": " ",
-    "lineNumber": 18,
+    "lineNumber": 22,
     "params": [
       {
         "nullable": null,
@@ -675,7 +704,7 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 56,
     "kind": "method",
     "name": "querySelectorAll",
     "memberof": "lib/document.js~Document",
@@ -685,7 +714,7 @@
     "longname": "lib/document.js~Document#querySelectorAll",
     "access": "public",
     "description": " ",
-    "lineNumber": 27,
+    "lineNumber": 31,
     "params": [
       {
         "nullable": null,
@@ -708,7 +737,7 @@
     }
   },
   {
-    "__docId__": 55,
+    "__docId__": 57,
     "kind": "file",
     "name": "lib/index.js",
     "content": "// @flow\n\nimport TriHermes from './triHelmes';\n\nexport default TriHermes;\n",
@@ -719,10 +748,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 56,
+    "__docId__": 58,
     "kind": "file",
     "name": "lib/triHelmes.js",
-    "content": "// @flow\n\nimport Cheerio from 'cheerio';\n\nimport Chaldeas from 'chaldeas';\nimport Document from './document';\n\n/**\n * @type {TriHermes}\n */\nexport default class TriHermes {\n  chaldeas: Chaldeas;\n  url: string;\n  doc: Document;\n\n  /**\n   * @param  {Chaldeas} chaldeas [chaldeas instance]\n   */\n  constructor(chaldeas: Chaldeas) {\n    this.chaldeas = chaldeas;\n  }\n\n  static parse(html: string): Cheerio {\n    return Cheerio.load(html);\n  }\n\n  async load(): Promise<> {\n    const devTools = await this.chaldeas.getDevtoolsInterface();\n    const page = await devTools.PageDomain();\n\n    await page.navigate({ url: this.url });\n\n    return new Promise((resolve) => {\n      page.domContentEventFired(async () => {\n        const dom = await devTools.DOMDomain();\n\n        this.doc = new Document(dom);\n\n        resolve();\n      });\n    }).catch(e => this.chaldeas.terminate().then(() => {\n      throw e;\n    }));\n  }\n\n  async querySelectorAll(query: string): Promise<Array<any>> {\n    const results = await this.doc.querySelectorAll(query);\n    return results.map(html => TriHermes.parse(html));\n  }\n\n  async querySelector(query: string): Promise<any> {\n    const result = await this.doc.querySelector(query);\n    if (result === null) {\n      return null;\n    }\n\n    return TriHermes.parse((result || ''));\n  }\n}\n",
+    "content": "// @flow\n\nimport Cheerio from 'cheerio';\n\nimport Chaldeas from 'chaldeas';\nimport Document from './document';\n\nexport default class TriHermes {\n  chaldeas: Chaldeas;\n  url: string;\n  doc: Document;\n\n  /**\n   * @param  {Chaldeas} chaldeas [chaldeas interface instance]\n   */\n  constructor(chaldeas: Chaldeas) {\n    this.chaldeas = chaldeas;\n  }\n\n  static parse(html: string): Cheerio {\n    return Cheerio.load(html);\n  }\n\n  async load(): Promise<> {\n    const devTools = await this.chaldeas.getDevtoolsInterface();\n    const page = await devTools.PageDomain();\n\n    await page.navigate({ url: this.url });\n\n    return new Promise((resolve) => {\n      page.domContentEventFired(async () => {\n        const dom = await devTools.DOMDomain();\n        const rootNode = await dom.getDocument();\n\n        this.doc = new Document(dom, rootNode.root);\n\n        resolve();\n      });\n    }).catch(e => this.chaldeas.terminate().then(() => {\n      throw e;\n    }));\n  }\n\n  async querySelectorAll(query: string): Promise<Array<any>> {\n    const results = await this.doc.querySelectorAll(query);\n    return results.map(html => TriHermes.parse(html));\n  }\n\n  async querySelector(query: string): Promise<any> {\n    const result = await this.doc.querySelector(query);\n    if (result === null) {\n      return null;\n    }\n\n    return TriHermes.parse((result || ''));\n  }\n}\n",
     "static": true,
     "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/lib/triHelmes.js",
     "access": "public",
@@ -730,7 +759,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 57,
+    "__docId__": 59,
     "kind": "class",
     "name": "TriHermes",
     "memberof": "lib/triHelmes.js",
@@ -740,20 +769,13 @@
     "export": true,
     "importPath": "TriHermes/lib/triHelmes.js",
     "importStyle": "TriHermes",
-    "description": "",
-    "lineNumber": 11,
-    "type": {
-      "nullable": null,
-      "types": [
-        "TriHermes"
-      ],
-      "spread": false,
-      "description": null
-    },
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
     "interface": false
   },
   {
-    "__docId__": 58,
+    "__docId__": 60,
     "kind": "member",
     "name": "chaldeas",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -761,7 +783,7 @@
     "longname": "lib/triHelmes.js~TriHermes#chaldeas",
     "access": "public",
     "description": "",
-    "lineNumber": 12,
+    "lineNumber": 9,
     "type": {
       "nullable": null,
       "types": [
@@ -772,7 +794,7 @@
     }
   },
   {
-    "__docId__": 59,
+    "__docId__": 61,
     "kind": "member",
     "name": "url",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -780,7 +802,7 @@
     "longname": "lib/triHelmes.js~TriHermes#url",
     "access": "public",
     "description": "",
-    "lineNumber": 13,
+    "lineNumber": 10,
     "type": {
       "nullable": null,
       "types": [
@@ -791,7 +813,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 62,
     "kind": "member",
     "name": "doc",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -799,7 +821,7 @@
     "longname": "lib/triHelmes.js~TriHermes#doc",
     "access": "public",
     "description": "",
-    "lineNumber": 14,
+    "lineNumber": 11,
     "type": {
       "nullable": null,
       "types": [
@@ -810,7 +832,7 @@
     }
   },
   {
-    "__docId__": 61,
+    "__docId__": 63,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -820,7 +842,7 @@
     "longname": "lib/triHelmes.js~TriHermes#constructor",
     "access": "public",
     "description": "",
-    "lineNumber": 19,
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -830,12 +852,12 @@
         "spread": false,
         "optional": false,
         "name": "chaldeas",
-        "description": "[chaldeas instance]"
+        "description": "[chaldeas interface instance]"
       }
     ]
   },
   {
-    "__docId__": 63,
+    "__docId__": 65,
     "kind": "method",
     "name": "parse",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -845,7 +867,7 @@
     "longname": "lib/triHelmes.js~TriHermes.parse",
     "access": "public",
     "description": " ",
-    "lineNumber": 23,
+    "lineNumber": 20,
     "params": [
       {
         "nullable": null,
@@ -868,7 +890,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 66,
     "kind": "method",
     "name": "load",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -878,7 +900,7 @@
     "longname": "lib/triHelmes.js~TriHermes#load",
     "access": "public",
     "description": " ",
-    "lineNumber": 27,
+    "lineNumber": 24,
     "return": {
       "nullable": null,
       "types": [
@@ -890,7 +912,7 @@
     "params": []
   },
   {
-    "__docId__": 66,
+    "__docId__": 68,
     "kind": "method",
     "name": "querySelectorAll",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -900,7 +922,7 @@
     "longname": "lib/triHelmes.js~TriHermes#querySelectorAll",
     "access": "public",
     "description": " ",
-    "lineNumber": 46,
+    "lineNumber": 44,
     "params": [
       {
         "nullable": null,
@@ -923,7 +945,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 69,
     "kind": "method",
     "name": "querySelector",
     "memberof": "lib/triHelmes.js~TriHermes",
@@ -933,7 +955,7 @@
     "longname": "lib/triHelmes.js~TriHermes#querySelector",
     "access": "public",
     "description": " ",
-    "lineNumber": 51,
+    "lineNumber": 49,
     "params": [
       {
         "nullable": null,
@@ -965,7 +987,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"TriHermes\",\n  \"version\": \"0.1.0\",\n  \"main\": \"src/index.js\",\n  \"repository\": \"ssh://git@github.com/teitei-tk/TriHermes.git\",\n  \"homepage\": \"https://github.com/teitei-tk/TriHermes\",\n  \"author\": \"teitei-tk <teitei.tk@gmail.com>\",\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"chrome\",\n    \"headless\",\n    \"headless-browser\",\n    \"chrome-headless\",\n    \"devtools\",\n    \"page object\"\n  ],\n  \"bugs\": {\n    \"url\": \"https://github.com/teitei-tk/TriHermes/issues\",\n    \"email\": \"teitei.tk@gmail.com\"\n  },\n  \"scripts\": {\n    \"eslint:lint\": \"eslint lib/\",\n    \"flow:lint\": \"flow lib/\",\n    \"flow:gen\": \"flow-copy-source lib src\",\n    \"doc:gen\": \"esdoc -c .esdoc.json\",\n    \"lint\": \"yarn run eslint:lint; yarn run flow:lint;\",\n    \"test\": \"yarn run lint; jest\",\n    \"build\": \"babel lib -d src; yarn run flow:gen\",\n    \"pre:build\": \"yarn run test; yarn run build; yarn run doc:gen;\"\n  },\n  \"jest\": {\n    \"roots\": [\n      \"lib/\"\n    ]\n  },\n  \"dependencies\": {\n    \"chaldeas\": \"^0.1.2\",\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"chrome-remote-interface-flowtype\": \"^0.1.3\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.24.1\",\n    \"babel-core\": \"^6.25.0\",\n    \"babel-eslint\": \"^7.2.3\",\n    \"babel-jest\": \"^20.0.3\",\n    \"babel-plugin-transform-async-to-generator\": \"^6.24.1\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-flow-strip-types\": \"^6.22.0\",\n    \"babel-plugin-transform-runtime\": \"^6.23.0\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-es2017\": \"^6.24.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"esdoc\": \"^1.0.1\",\n    \"esdoc-flow-type-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"3.19.0\",\n    \"eslint-config-airbnb-base\": \"^11.2.0\",\n    \"eslint-plugin-async-await\": \"^0.0.0\",\n    \"eslint-plugin-flowtype\": \"^2.34.0\",\n    \"eslint-plugin-import\": \"^2.5.0\",\n    \"eslint-plugin-jest\": \"^20.0.3\",\n    \"flow-bin\": \"^0.48.0\",\n    \"flow-copy-source\": \"^1.2.0\",\n    \"jest\": \"^20.0.4\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"TriHermes\",\n  \"version\": \"0.1.0\",\n  \"main\": \"src/index.js\",\n  \"repository\": \"ssh://git@github.com/teitei-tk/TriHermes.git\",\n  \"homepage\": \"https://github.com/teitei-tk/TriHermes\",\n  \"author\": \"teitei-tk <teitei.tk@gmail.com>\",\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"chrome\",\n    \"headless\",\n    \"headless-browser\",\n    \"chrome-headless\",\n    \"devtools\",\n    \"page object\"\n  ],\n  \"bugs\": {\n    \"url\": \"https://github.com/teitei-tk/TriHermes/issues\",\n    \"email\": \"teitei.tk@gmail.com\"\n  },\n  \"engines\": {\n    \"node\": \"6.9.1\"\n  },\n  \"scripts\": {\n    \"eslint:lint\": \"eslint lib/\",\n    \"flow:lint\": \"flow lib/\",\n    \"flow:gen\": \"flow-copy-source lib src\",\n    \"doc:gen\": \"esdoc -c .esdoc.json\",\n    \"lint\": \"yarn run eslint:lint; yarn run flow:lint;\",\n    \"test\": \"yarn run lint; jest\",\n    \"build\": \"babel lib -d src; yarn run flow:gen\",\n    \"pre:build\": \"yarn run test; yarn run build; yarn run doc:gen;\"\n  },\n  \"jest\": {\n    \"roots\": [\n      \"lib/\"\n    ]\n  },\n  \"dependencies\": {\n    \"chaldeas\": \"^0.1.2\",\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"chrome-remote-interface-flowtype\": \"^0.1.3\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.24.1\",\n    \"babel-core\": \"^6.25.0\",\n    \"babel-eslint\": \"^7.2.3\",\n    \"babel-jest\": \"^20.0.3\",\n    \"babel-plugin-transform-async-to-generator\": \"^6.24.1\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-flow-strip-types\": \"^6.22.0\",\n    \"babel-plugin-transform-runtime\": \"^6.23.0\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-es2017\": \"^6.24.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"esdoc\": \"^1.0.1\",\n    \"esdoc-flow-type-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"3.19.0\",\n    \"eslint-config-airbnb-base\": \"^11.2.0\",\n    \"eslint-plugin-async-await\": \"^0.0.0\",\n    \"eslint-plugin-flowtype\": \"^2.34.0\",\n    \"eslint-plugin-import\": \"^2.5.0\",\n    \"eslint-plugin-jest\": \"^20.0.3\",\n    \"flow-bin\": \"^0.48.0\",\n    \"flow-copy-source\": \"^1.2.0\",\n    \"jest\": \"^20.0.4\"\n  }\n}\n",
     "longname": "/Users/higa-yoshikatsu/.golang/src/github.com/teitei-tk/TriHermes/package.json",
     "name": "package.json",
     "static": true,
