@@ -6,7 +6,7 @@ Page Object Model using Chrome Headless Browser
 
 ## Dependencies
 
-* Node.js 6.10 or later
+* Node.js 6.10.3 or later
 * chaldeas ^0.1.2
 * cheerio ^1.0.0-rc.2
 * chrome-remote-interface-flowtype ^0.1.3

@@ -19,7 +19,7 @@
     "email": "teitei.tk@gmail.com"
   },
   "engines": {
-    "node": "6.9.1"
+    "node": "6.10.*"
   },
   "scripts": {
     "eslint:lint": "eslint lib/",
@@ -37,7 +37,7 @@
     ]
   },
   "dependencies": {
-    "chaldeas": "^0.1.2",
+    "chaldeas": "^0.1.4",
     "cheerio": "^1.0.0-rc.2",
     "chrome-remote-interface-flowtype": "^0.1.3"
   },
